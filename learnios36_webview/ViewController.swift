@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var addressBar: UITextField!
     @IBOutlet weak var infoLabel: UILabel!
+
     @IBOutlet weak var webView: UIWebView!
     
 
@@ -38,22 +39,35 @@ class ViewController: UIViewController {
     @IBAction func goButton(sender: UIButton) {
         print("yo gobutton pressed")
         if addressBar.text == "" {
+            print("empty input")
+            infoLabel.text =  "Please enter text =D"
             return
         }
         
         guard let text: String = addressBar.text else {
             return
         }
-        
-        infoLabel.hidden = true
+        //print(text)
         //2a removing previous feature //loadURL(text)
         //2b adding new feature, auto prepend http://
         if text.rangeOfString(".") != nil {
+            infoLabel.hidden = true
+            print("yo entered domain named")
+            print(text)
             var finalString: String = text.lowercaseString
             if finalString.rangeOfString("http://") == nil {
                 finalString = "http://\(finalString)"
+                print("yo search term2")
             }
             self.loadURL(finalString)
+        }
+        //add new feature, search term
+        else {
+            print("yo entered search term1")
+            print(text)
+            let searchStr = text.stringByReplacingOccurrencesOfString(" ", withString: "+")
+            let finalStr = "https://www.google.com/search?q=\(searchStr)"
+            self.loadURL(finalStr)
         }
 
         
