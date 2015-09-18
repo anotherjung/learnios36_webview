@@ -65,6 +65,7 @@ class ViewController: UIViewController {
         else {
             print("yo entered search term1")
             print(text)
+            infoLabel.hidden = true
             let searchStr = text.stringByReplacingOccurrencesOfString(" ", withString: "+")
             let finalStr = "https://www.google.com/search?q=\(searchStr)"
             self.loadURL(finalStr)

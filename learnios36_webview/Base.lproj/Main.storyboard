@@ -18,9 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwH-VE-iPk">
-                                <rect key="frame" x="20" y="28" width="30" height="36"/>
+                                <rect key="frame" x="20" y="28" width="36" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="6Dn-yB-V8t"/>
+                                    <constraint firstAttribute="width" constant="36" id="6Dn-yB-V8t"/>
+                                    <constraint firstAttribute="height" constant="36" id="Bib-IL-2No"/>
                                 </constraints>
                                 <state key="normal" title="&lt;" image="ic_arrow_back_18pt_2x.png"/>
                                 <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
@@ -31,12 +32,12 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vMG-oI-FSS">
-                                <rect key="frame" x="58" y="28" width="442" height="30"/>
+                                <rect key="frame" x="64" y="28" width="436" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WY-ls-2vC">
-                                <rect key="frame" x="508" y="21" width="50" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WY-ls-2vC">
+                                <rect key="frame" x="508" y="28" width="30" height="36"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="Ekh-w9-aFQ"/>
@@ -61,10 +62,10 @@
                                 <rect key="frame" x="0.0" y="82" width="600" height="518"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="#1 Enter keyword or domain in the text field #2 tap blocked arrow" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omB-ma-2Rm">
-                                <rect key="frame" x="40" y="290" width="521" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#1 Enter keyword or domain in the text field #2 tap blocked arrow" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="omB-ma-2Rm">
+                                <rect key="frame" x="40" y="290" width="520" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -79,6 +80,7 @@
                             <constraint firstItem="Nba-Xg-FPO" firstAttribute="leading" secondItem="6WY-ls-2vC" secondAttribute="trailing" constant="12" id="Pw2-Pu-edz">
                                 <variation key="heightClass=compact-widthClass=compact" constant="26"/>
                             </constraint>
+                            <constraint firstItem="omB-ma-2Rm" firstAttribute="centerX" secondItem="EsX-O4-YrU" secondAttribute="centerX" id="Qrx-6a-T9Q"/>
                             <constraint firstItem="omB-ma-2Rm" firstAttribute="leading" secondItem="EsX-O4-YrU" secondAttribute="leadingMargin" constant="20" id="VPD-zB-QQW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="omB-ma-2Rm" secondAttribute="trailing" constant="20" id="Viv-Sk-iUN"/>
                             <constraint firstItem="vMG-oI-FSS" firstAttribute="top" secondItem="lwH-VE-iPk" secondAttribute="top" id="XDw-in-a7B">
@@ -97,13 +99,26 @@
                                 <variation key="heightClass=compact-widthClass=compact" constant="21"/>
                             </constraint>
                             <constraint firstAttribute="trailing" secondItem="tgZ-jh-WlP" secondAttribute="trailing" id="jOy-2X-QN8"/>
+                            <constraint firstItem="omB-ma-2Rm" firstAttribute="centerY" secondItem="EsX-O4-YrU" secondAttribute="centerY" id="kBI-92-gRm"/>
+                            <constraint firstItem="omB-ma-2Rm" firstAttribute="centerY" secondItem="EsX-O4-YrU" secondAttribute="centerY" id="lkk-0E-SBf"/>
                             <constraint firstItem="Nba-Xg-FPO" firstAttribute="trailing" secondItem="EsX-O4-YrU" secondAttribute="trailingMargin" id="lzc-yM-wVd">
                                 <variation key="heightClass=compact-widthClass=compact" constant="14"/>
                             </constraint>
+                            <constraint firstItem="omB-ma-2Rm" firstAttribute="centerX" secondItem="EsX-O4-YrU" secondAttribute="centerX" id="uA0-b0-cOD"/>
                             <constraint firstItem="lwH-VE-iPk" firstAttribute="top" secondItem="ZLF-gQ-UNb" secondAttribute="bottom" constant="8" symbolic="YES" id="ui1-F9-sjr">
                                 <variation key="heightClass=compact-widthClass=compact" constant="5"/>
                             </constraint>
+                            <constraint firstItem="omB-ma-2Rm" firstAttribute="centerY" secondItem="EsX-O4-YrU" secondAttribute="centerY" id="wNR-3b-WmW"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="A8M-JG-wo6"/>
+                                <exclude reference="Qrx-6a-T9Q"/>
+                                <exclude reference="kBI-92-gRm"/>
+                                <exclude reference="lkk-0E-SBf"/>
+                                <exclude reference="wNR-3b-WmW"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="addressBar" destination="vMG-oI-FSS" id="THx-aO-tPH"/>
