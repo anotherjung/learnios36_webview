@@ -38,15 +38,26 @@ class ViewController: UIViewController {
     @IBAction func goButton(sender: UIButton) {
         print("yo gobutton pressed")
         if addressBar.text == "" {
-            return 
+            return
         }
         
         guard let text: String = addressBar.text else {
             return
         }
-        loadURL(text)
         
-    }
+        infoLabel.hidden = true
+        //2a removing previous feature //loadURL(text)
+        //2b adding new feature, auto prepend http://
+        if text.rangeOfString(".") != nil {
+            var finalString: String = text.lowercaseString
+            if finalString.rangeOfString("http://") == nil {
+                finalString = "http://\(finalString)"
+            }
+            self.loadURL(finalString)
+        }
+
+        
+    } //ends gobutton
     
     
     
